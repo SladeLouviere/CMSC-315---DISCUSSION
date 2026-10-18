@@ -33,3 +33,12 @@ Your reflection should be approximately 150–200 words and address the followin
 2. What challenges did you encounter, and how did you overcome them?
 3. Compare OOP to procedural programming.
 4. Discuss the benefits of maintainability and reusability and apply this managing overhead, practical application development, and future use.
+
+## Implementation
+In my assignment, I used OOP to create a parent Book class and a child FictionBook class. Inheritance allowed the child class to reuse the parent's attributes and methods while adding its own features, such as genre and age rating.
+
+## Reflection:
+The concepts I learned in this assignment were super classes, subclasses, inheritance, namespaces, polymorphism, shallow copying, and deep copying. The main challenge I faced with this assignment was refamiliarizing myself with Python’s syntax. Due to my slow burn through school, I haven’t used Python. I overcame this by reviewing some of the optional Python Primer section in the school text. 
+Object-Oriented Programming focuses on encapsulations to group attributes and behaviors called objects. Procedural Programming emphasizes actions that interact with data directly in a top-down, step-by-step sequence.
+OOP improves maintainability because information and functionality are grouped relatively, making it easier to understand, update, and debug. OOP also supports reusability though inheritance and object copying. However, OOP may have additional overhead due to class definitions, object creations, and design complexity compared to POP. 
+In practical applications, OOP is useful for such library systems where books, members, and book loans are represented by objects. In the future, I can use OOP to build larger, more organized applications while choosing the programming approach that best fits each project's requirements.
