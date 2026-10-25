@@ -34,3 +34,9 @@ Your reflection should be approximately 150–200 words and address the followin
 1. What concepts or skills did you learn while completing this assignment?
 2. What challenges did you encounter, and how did you overcome them?
 3. Explain the differences between stacks and queues as this relates to real-world applications.
+
+
+## Reflection:
+While completing this assignment, I learned how stacks and queues work in Python and how to implement their basic operations. I learned that stacks use LIFO, while queues use FIFO. I also practiced using Python lists and Collections' deque module to store and manage data. One challenge I encountered was implementing the logic for adding and removing items in each ADT. I overcame this by testing different values and observing the order in which they were removed. I also learned how to handle edge cases by using try/except blocks to display helpful messages, which is a little more advanced than basic if/else statements.
+
+The main difference between stacks and queues is the order in which items are processed. A stack follows LIFO, meaning the last item added is the first one removed. A real-world example is a single-lane driveway, where the last parked car, nearest the top of the driveway, is the first to leave. A queue follows FIFO, meaning the first item added is the first one removed. For example, a line at a grocery store serves customers in the order they arrive. These examples show how stacks and queues help organize information and process items efficiently, depending on the situation.

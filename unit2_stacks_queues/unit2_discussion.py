@@ -18,7 +18,7 @@ class Stack:
     def __init__(self):
         # TODO (Student): Create the internal data structure for the stack.
         # Hint: A Python list can be used to store stack values.
-        ## 
+        ## initializes and empty item list object 
         self.items = []
         return print ("New Stack created.\n")
 
@@ -34,7 +34,8 @@ class Stack:
         # TODO (Student): Remove and return the most recently added value.
         # Improve or explain empty-stack handling.
         # What should happen if the stack is empty?
-        ## if list is empty, pop throws error. try the pop and handling the error if it occurs with a try/except block.
+        ## if list is empty, pop throws error. try the pop and handling the 
+            ## error if it occurs with a try/except block.
         print (f"Attempting pop...")
         try:
             value = self.items.pop()
@@ -45,7 +46,8 @@ class Stack:
     def peek(self):
         # TODO (Student): Return the top value without removing it.
         # Add a comment explaining what peek does.
-        ## 
+        ## Peek looks at the top of the stack, 
+            ## in this case, the last item in a list is found with [-1]
         print ("Taking a peek...")
         try:
             value = self.items[-1]
