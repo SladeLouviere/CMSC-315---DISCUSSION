@@ -22,7 +22,12 @@ def insert_at(lst, index, value):
     - Use comments to explain how insertion performance may vary depending on
       where the insertion occurs.
     """
-    pass
+## Insert adds the new value at the specified position.
+## Existing elements at that position and after it shift one position to the 
+    # right to make room.
+## Inserting at the beginning or middle requires shifting existing elements, 
+    # so it can take O(n) time.
+    lst.insert(index, value)
 
 
 def delete_at(lst, index):
@@ -36,8 +41,14 @@ def delete_at(lst, index):
     - Return None if the index is invalid.
     - Add comments explaining why index validation and safe deletion are important.
     """
-    pass
-
+## Validate the index before attempting deletion. Negative indexes are valid in Python 
+    # if they are within the list's range 
+    if index < -len(lst) or index >= len(lst):
+        return None
+## pop() removes the element and returns its value. Elements after the deleted 
+    # position shift left.
+    return lst.pop(index)
+   
 
 def search_value(lst, value):
     """
@@ -49,8 +60,13 @@ def search_value(lst, value):
     - Return -1 if the value is not found.
     - Add comments explaining why this is a linear search and why it scans sequentially.
     """
-    pass
-
+## This is a linear search because it may need to examine every element until 
+    # the value is found.
+##  Its worst-case time complexity is O(n).
+    try:
+        return list.index(lst, value)
+    except ValueError:
+        return -1
 
 def main():
     print("=== UNIT 3: LIST OPERATIONS ===")
@@ -72,6 +88,31 @@ def main():
     print("\n=== INSERTION TESTS ===")
     print("TODO: Create a list and demonstrate insertions.")
 
+    # Creates a list containing several books.
+    bookList = ["It", "Jaws", "Becoming"]
+
+    # Displays the original list.
+    print("\n--- Original list ---")
+    print(bookList)
+
+    # Inserts a book at the beginning (index 0).
+    # Existing elements shift one position to the right.
+    insert_at(bookList, 0, "The Hobbit")
+    print("\n--- After beginning insertion ---")
+    print(bookList)
+
+    # Inserts a book in the middle (index 2).
+    # Elements at index 2 and beyond shift right.
+    insert_at(bookList, 2, "Dune")
+    print("\n--- After middle insertion ---")
+    print(bookList)
+
+    # Inserts a book at the end.
+    # No existing elements need to shift.
+    insert_at(bookList, len(bookList), "Moby Dick")
+    print("\n--- After end insertion ---")
+    print(bookList)
+
     # ===============================
     # TODO (Student): DELETION TESTS
     # ===============================
@@ -88,6 +129,21 @@ def main():
     print("\n=== DELETION TESTS ===")
     print("TODO: Demonstrate deletions from multiple positions.")
 
+    # Deletes the first book (index 0).
+    removed = delete_at(bookList, 0)
+    print(f"\nRemoved from beginning: {removed}")
+    print("Updated list:", bookList)
+
+    # Deletes a book from the middle.
+    removed = delete_at(bookList, 1)
+    print(f"\nRemoved from middle: {removed}")
+    print("Updated list:", bookList)
+
+    # Deletes the last book.
+    removed = delete_at(bookList, -1)
+    print(f"\nRemoved from end: {removed}")
+    print("Updated list:", bookList)
+
     # ===============================
     # TODO (Student): SEARCH TESTS
     # ===============================
@@ -100,6 +156,23 @@ def main():
 
     print("\n=== SEARCH TESTS ===")
     print("TODO: Demonstrate searching for values.")
+
+    # Searches for a book that exists.
+    search = search_value(bookList, "The Hobbit")
+
+    if search != -1:
+        print(f"The Hobbit was found at index {search}.")
+    else:
+        print("The Hobbit was not found.")
+
+    # Searches for a book that does not exist.
+    search = search_value(bookList, "Jaws")
+
+    if search != -1:
+        print(f"Jaws was found at index {search}.")
+    else:
+        print("Jaws was not found.")
+
 
     # ===============================
     # TODO (Student): EDGE CASES
@@ -117,6 +190,31 @@ def main():
     print("\n=== EDGE CASES ===")
     print("TODO: Demonstrate at least two edge cases.")
 
+## EDGE CASE: Insert into an empty list.
+## Python allows inserting to empty lists. The new value becomes the first element.
+    emptyList = []
+
+    insert_at(emptyList, 32, "Harry Potter")
+
+    print("\n1. Inserting into an empty list:")
+    print(emptyList)
+
+## EDGE CASE: Delete using an invalid index.
+## The list contains only one element, so index 5 does not exist.
+    removed = delete_at(emptyList, 5)
+
+    print("\n2. Deleting using an invalid index:")
+    print("Removed value:", removed)
+
+## EDGE CASE: Search for a missing value.
+## The value "Twilight" is not in the list. search_value() should return -1.
+    search = search_value(emptyList, "Twilight")
+
+    print("\n3. Searching for a missing value:")
+    if search == -1:
+        print("Book not found. Returned -1.")
+    else:
+        print("Book found at index", search)
 
 
 if __name__ == "__main__":
