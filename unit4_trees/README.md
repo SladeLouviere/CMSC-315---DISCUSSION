@@ -33,12 +33,9 @@ Your reflection should be approximately 150–200 words and address the followin
 
 
 <!-- Reflection -->
-While completing this assignment, I learned how a BST organizes data and how recursive methods can be used to insert, search, and retrieve values. I also learned how an in-order traversal visits the left subtree, current node, and right subtree to display values in ascending order.
-
+While completing this assignment, I learned how a BST organizes data and how recursive methods can insert, search, and retrieve values. I also learned that an in-order traversal visits the left subtree, the current node, and the right subtree to display values in ascending order.
 One challenge I encountered was understanding how recursion returns the correct node references during insertion. I am still accustomed to Java's direct data typing and variable declarations during initialization, so adjusting to Python's syntax and dynamic typing took some getting used to. I worked through these challenges by testing different scenarios and adding comments to explain how each operation worked.
-
-A BST can improve search efficiency because each comparison eliminates part of the tree. A balanced BST can search in O(log n) time, compared to O(n) for a linear search. However, an unbalanced BST can also take O(n) time. This assignment helped me understand how BSTs can be useful for organizing and retrieving information.
+A BST can improve search efficiency because each comparison eliminates part of the tree. A balanced BST can search in O(log n) time, compared to O(n) for a linear search. However, an unbalanced BST can also take O(n) time. This assignment helped me understand how BSTs can organize and retrieve information.
 
 <!-- IMPLEMENTATION -->
-
 I designed my Binary Search Tree around a library inventory system using ISBN numbers to organize books. I inserted each ISBN so that smaller values were placed in the left subtree and larger values were placed in the right subtree. This allowed me to search for specific books efficiently without checking every ISBN individually. I also used in-order traversal to display the ISBNs in ascending order. My application demonstrated how a BST could help a library organize its book inventory and quickly locate books by their identification numbers. 
