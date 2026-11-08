@@ -37,8 +37,6 @@ While completing this assignment, I learned how a BST organizes data and how rec
 
 One challenge I encountered was understanding how recursion returns the correct node references during insertion. I am still accustomed to Java's direct data typing and variable declarations during initialization, so adjusting to Python's syntax and dynamic typing took some getting used to. I worked through these challenges by testing different scenarios and adding comments to explain how each operation worked.
 
-For my real-world application, I designed a library inventory system that used ISBN numbers to organize books. Smaller ISBN numbers were placed in the left subtree, while larger numbers were placed in the right subtree. I also considered how each ISBN could serve as the key for a book object containing additional information, such as the author's name, book title, genre, and location within the library. This would allow the library to search by ISBN and retrieve the book's other identifying information. I used in-order traversal to display the ISBN numbers in sorted order. 
-
 A BST can improve search efficiency because each comparison eliminates part of the tree. A balanced BST can search in O(log n) time, compared to O(n) for a linear search. However, an unbalanced BST can also take O(n) time. This assignment helped me understand how BSTs can be useful for organizing and retrieving information.
 
 <!-- IMPLEMENTATION -->
