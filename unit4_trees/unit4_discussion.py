@@ -103,7 +103,7 @@ class BST:
             return True
         elif value < node.value:
             return self._search_recursive(node.left_child, value)
-        return self._search_recursive(node.right_child, value)
+        return self._search_recursive(node.right_child, value) 
 
     def inorder(self):
         """
